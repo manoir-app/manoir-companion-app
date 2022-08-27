@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeAutomationApp.MainMenu">
+    <ContentView.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Color="#f2f2f2" Offset="0" />
+                <GradientStop Color="#d5d5d5" Offset="1" />
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+    </ContentView.Background>
+    <ContentView.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="ContentLayout" Value="Left, 10" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0" />
+            
+            <Style.Triggers>
+                <Trigger TargetType="Button" Property="InputTransparent" Value="true">
+                    <Setter Property="FontFamily" Value="Exo-Bold" />
+                    <Setter Property="TextColor" Value="#343E7A" />
+                    <Setter Property="Background" Value="#0FAABBF0" />
+                    <Setter Property="BorderColor" Value="#9DA7C6" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </ContentView.Resources>
+  <ContentView.Content>
+        <Grid>
+            <StackLayout Margin="5,80,105,80" VerticalOptions="Center">
+                <Button x:Name="btnMainPage" Text="Accueil" Clicked="btnChangePage_Clicked" />
+
+                <Button Text="Calendrier" IsEnabled="False" />
+                <Button x:Name="btnTask" Text="Tâches" Clicked="btnChangePage_Clicked" />
+                <Button Text="Véhicule" IsEnabled="False" />
+                <Button x:Name="btnDomotique" Text="Domotique" IsEnabled="True" Clicked="btnChangePage_Clicked" />
+                <Button Text="Courses" IsEnabled="False" />
+                <Button Text="Santé" IsEnabled="False" />
+                <Button Text="Médias" x:Name="btnMedias" Clicked="btnChangePage_Clicked" />
+                <Button Text="Cusine" IsEnabled="False" />
+                <Button Text="Actualités" IsEnabled="False" />
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

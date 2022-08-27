@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HomeAutomationApp"
+             x:Class="HomeAutomationApp.TaskPage">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="menuContent">
+            <local:MainMenu x:Name="menuControl" HorizontalOptions="Fill" VerticalOptions="Fill" />
+        </Grid>
+
+        <Grid x:Name="mainContent">
+
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#343E7A" Offset="0.5" />
+                        <GradientStop Color="#192852" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0"  Padding="0,6,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <local:MainMenuButton Grid.Column="0" x:Name="btnMainMenu" 
+                                      MainMenuControl="{x:Reference menuControl}" 
+                                      MainLayout="{x:Reference mainContent}" 
+                                      ExitControl="{x:Reference gridReplace}" 
+                                      />
+
+                <local:MainStatus Grid.Column="1" x:Name="pnlMainStatus" />
+
+            </Grid>
+
+
+            <Grid  Grid.Row="1" IsVisible="{Binding ShowNotConnected}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="Bonjour," VerticalOptions="Center" x:Name="lblGreetings1" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+                <Label Text="Ca c'est la page des tâches."  Grid.Row="1" VerticalOptions="Start" FontFamily="Exo-Bold" FontSize="24"  HorizontalOptions="FillAndExpand" TextColor="White"  />
+            </Grid>
+
+
+
+            <Grid x:Name="gridReplace" Grid.RowSpan="2" BackgroundColor="#000000" Opacity="0.1" IsVisible="false">
+
+            </Grid>
+
+
+
+        </Grid>
+
+    </Grid>
+
+
+</ContentPage>

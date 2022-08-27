@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeAutomationApp.MainStatus">
+  <ContentView.Content>
+        <StackLayout Orientation="Horizontal" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" Margin="25,0">
+            <Label Text="MC" Opacity="1" x:Name="lblUserSmall"  FontSize="12" TextColor="#DFEFEFEF" VerticalOptions="Center" Margin="2,1,2,0" />
+
+            <Image Opacity="1" x:Name="lblOkNetwork" WidthRequest="18" HeightRequest="18" VerticalOptions="Center" Margin="2,0" />
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Exo-Black.otf" />
+    <None Remove="Fonts\Exo-Bold.otf" />
+    <None Remove="Fonts\Exo-ExtraBold.otf" />
+    <None Remove="Fonts\Exo-ExtraLight.otf" />
+    <None Remove="Fonts\Exo-Italic.otf" />
+    <None Remove="Fonts\Exo-Light.otf" />
+    <None Remove="Fonts\Exo-Medium.otf" />
+    <None Remove="Fonts\Exo-Regular.otf" />
+    <None Remove="Fonts\Exo-SemiBold.otf" />
+    <None Remove="Fonts\Exo-Thin.otf" />
+    <None Remove="Images\fond-house.png" />
+    <None Remove="Images\MainMenuButton.png" />
+    <None Remove="Images\streamline-icon-calendar_140.png" />
+    <None Remove="Images\streamline-icon-messages-bubble-square_140.png" />
+    <None Remove="Images\streamline-icon-messages-bubble-typing-1.png" />
+    <None Remove="Images\streamline-icon-multiple-users-1_140.png" />
+    <None Remove="Images\streamline-icon-phone_140.png" />
+    <None Remove="Images\streamline-icon-pin_140.png" />
+    <None Remove="Images\streamline-icon-real-estate-search-house-1.png" />
+    <None Remove="Images\streamline-icon-server-1_140.png" />
+    <None Remove="Images\streamline-icon-single-man-circle.png" />
+    <None Remove="Images\streamline-icon-style-three-pin-check.png" />
+    <None Remove="Images\streamline-icon-touch-password-lock_400.png" />
+    <None Remove="Exo-Regular.ttf" />
+    <None Remove="Images\streamline-icon-wifi_140.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Exo-Black.otf" />
+    <EmbeddedResource Include="Fonts\Exo-Bold.otf" />
+    <EmbeddedResource Include="Fonts\Exo-ExtraBold.otf" />
+    <EmbeddedResource Include="Fonts\Exo-ExtraLight.otf" />
+    <EmbeddedResource Include="Fonts\Exo-Italic.otf" />
+    <EmbeddedResource Include="Fonts\Exo-Light.otf" />
+    <EmbeddedResource Include="Fonts\Exo-Medium.otf" />
+    <EmbeddedResource Include="Fonts\Exo-Regular.otf" />
+    <EmbeddedResource Include="Fonts\Exo-SemiBold.otf" />
+    <EmbeddedResource Include="Fonts\Exo-Thin.otf" />
+    <EmbeddedResource Include="Images\fond-house.png" />
+    <EmbeddedResource Include="Images\MainMenuButton.png" />
+    <EmbeddedResource Include="Images\streamline-icon-messages-bubble-typing-1.png" />
+    <EmbeddedResource Include="Images\streamline-icon-real-estate-search-house-1.png" />
+    <EmbeddedResource Include="Images\streamline-icon-single-man-circle.png" />
+    <EmbeddedResource Include="Images\streamline-icon-style-three-pin-check.png" />
+    <EmbeddedResource Include="Images\streamline-icon-touch-password-lock_400.png" />
+    <EmbeddedResource Include="Images\streamline-icon-wifi_140.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ManoirApp.Home.Common" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Plugin.NFC" Version="0.1.20" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\streamline-icon-calendar_140.png" />
+    <EmbeddedResource Include="Images\streamline-icon-messages-bubble-square_140.png" />
+    <EmbeddedResource Include="Images\streamline-icon-multiple-users-1_140.png" />
+    <EmbeddedResource Include="Images\streamline-icon-phone_140.png" />
+    <EmbeddedResource Include="Images\streamline-icon-pin_140.png" />
+    <EmbeddedResource Include="Images\streamline-icon-server-1_140.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="DeepLinkExecutingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DownloadsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HomeAutomationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainStatus.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SetupTasks.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TaskPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

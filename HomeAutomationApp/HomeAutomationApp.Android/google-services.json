@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "357966823325",
+    "project_id": "home-automation-297021",
+    "storage_bucket": "home-automation-297021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357966823325:android:02b683e1216a041fa97974",
+        "android_client_info": {
+          "package_name": "com.hemcefor.homeautomationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357966823325-muhk3brt36bja5b399oftuqti8g3jc6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlZ5DpIrcMyEMa0Gz4tjWhp6zzTTmwJHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357966823325-muhk3brt36bja5b399oftuqti8g3jc6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

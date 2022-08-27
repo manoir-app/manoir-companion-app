@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HomeAutomationApp" Background="#ffffff"
+             x:Class="HomeAutomationApp.DownloadsPage">
+    <ContentPage.Resources>
+
+        <local:IsStringEmptyConverter x:Key="IsEmpty" />
+        <local:IsStringNotEmptyConverter x:Key="IsNotEmpty" />
+
+    </ContentPage.Resources>
+    <CollectionView x:Name="MyListView"
+            ItemsSource="{Binding Items}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+
+                <!--<SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItem Text="Test Gauche" />
+                        </SwipeView.LeftItems>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Test" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <SwipeView.Content>-->
+                <StackLayout Padding="0,10">
+                    <!--<StackLayout.GestureRecognizers>
+                        <SwipeGestureRecognizer Direction="Left" Swiped="SwipeGestureRecognizer_Swiped" />
+                    </StackLayout.GestureRecognizers>-->
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Suppr" Background="#dcdcdc" TextColor="#494949" HorizontalOptions="Start" x:Name="btnSuppr" Clicked="btnSuppr_Clicked" />
+                        <StackLayout  HorizontalOptions="FillAndExpand" >
+                            <Label Text="{Binding Title}"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Frame
+                                    CornerRadius="10"
+                                    Padding="5,2" IsVisible="{Binding Resolution, Converter={StaticResource IsNotEmpty}}"
+                                    Margin="10,0,0,0"
+                                    BackgroundColor="WhiteSmoke"
+                                    HasShadow="False">
+                                    <Label FontSize="8" Text="{Binding Resolution}" />
+                                </Frame>
+                                <Frame
+                                    CornerRadius="10"
+                                    Padding="5,2" IsVisible="{Binding Language, Converter={StaticResource IsNotEmpty}}"
+                                    BackgroundColor="LightBlue"
+                                    Margin="10,0,0,0"
+                                    HasShadow="False">
+                                    <Label FontSize="8" TextColor="Navy" Text="{Binding Language}" />
+                                </Frame>
+                                <Frame
+                                    CornerRadius="10"
+                                    Padding="5,2"  IsVisible="{Binding HasLinkedItem}"
+                                    Margin="10,0,0,0"
+                                    BackgroundColor="#3b279e"
+                                    HasShadow="False">
+                                    <Label FontSize="8" Text="multiple" TextColor="White" />
+                                </Frame>
+
+                                <Frame
+                                    CornerRadius="10"
+                                    Padding="5,2"  IsVisible="{Binding IsPertinenceHigh}"
+                                    Margin="10,0,0,0"
+                                    BackgroundColor="Firebrick"
+                                    HasShadow="False">
+                                    <Label FontSize="8" Text="{Binding Pertinence}" TextColor="White" />
+                                </Frame>
+                                <Frame
+                                    CornerRadius="10"
+                                    Padding="5,2"  IsVisible="{Binding IsPertinenceMedium}"
+                                    Margin="10,0,0,0"
+                                    BackgroundColor="DarkOrange"
+                                    HasShadow="False">
+                                    <Label FontSize="8" Text="{Binding Pertinence}" TextColor="White" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Text="GO" Background="#343E7A" TextColor="#efefef" HorizontalOptions="End" x:Name="btnDownload" Clicked="btnDownload_Clicked" />
+                        
+                    </StackLayout>
+
+                    <!--<Label Text="{Binding Title}" 
+                   Style="{DynamicResource ListItemTextStyle}" />-->
+                    <!--<Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>-->
+                    <BoxView BackgroundColor="#dcdcdc" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,6,0,0"/>
+                </StackLayout>
+                <!--</SwipeView.Content>
+                    </SwipeView>-->
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

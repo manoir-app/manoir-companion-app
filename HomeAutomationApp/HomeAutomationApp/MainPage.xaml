@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HomeAutomationApp"
+             x:Class="HomeAutomationApp.MainPage">
+    <ContentPage.Resources>
+
+        <Style TargetType="Label" x:Key="HeaderLabelStyle">
+            <Setter Property="FontSize" Value="48" />
+            <Setter Property="FontFamily" Value="Exo-Black" />
+            <Setter Property="TextColor" Value="#DCDEF8" />
+            <Setter Property="Margin" Value="0,0,0,20" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="BlockLabelStyle">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontFamily" Value="Exo-Black" />
+            <Setter Property="TextColor" Value="#DCDEF8" />
+            <Setter Property="Margin" Value="0,0,0,20" />
+        </Style>
+
+    </ContentPage.Resources>
+    
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup Name="CustomVisualStates">
+            <VisualState Name="Tab1">
+                <VisualState.Setters>
+                    <Setter TargetName="btnHome" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgHome" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlHome" Property="IsVisible" Value="true" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnChat" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgChat" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlChat" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnTodo" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgTodo" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlTodo" Property="IsVisible" Value="false" />
+                </VisualState.Setters>
+                
+            </VisualState>
+            <VisualState Name="Tab2">
+                <VisualState.Setters>
+                    <Setter TargetName="btnHome" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHome" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHome" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="true" />
+                    <Setter TargetName="btnChat" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgChat" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlChat" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnTodo" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgTodo" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlTodo" Property="IsVisible" Value="false" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState Name="Tab3">
+                <VisualState.Setters>
+                    <Setter TargetName="btnHome" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHome" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHome" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnChat" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgChat" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlChat" Property="IsVisible" Value="true" />
+                    <Setter TargetName="btnTodo" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgTodo" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlTodo" Property="IsVisible" Value="false" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState Name="Tab4">
+                <VisualState.Setters>
+                    <Setter TargetName="btnHome" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHome" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHome" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnChat" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgChat" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlChat" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnTodo" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgTodo" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlTodo" Property="IsVisible" Value="true" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Grid x:Name="menuContent">
+            <local:MainMenu x:Name="menuControl" HorizontalOptions="Fill" VerticalOptions="Fill" />
+        </Grid>
+        
+        <Grid x:Name="mainContent">
+            
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#343E7A" Offset="0.5" />
+                        <GradientStop Color="#192852" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Image x:Name="imgFond" Grid.RowSpan="2" BackgroundColor="Transparent" HeightRequest="700" VerticalOptions="Start" Opacity="0.5" HorizontalOptions="End" TranslationX="100" TranslationY="-250" />
+
+            <Grid Grid.Row="0" IsVisible="{Binding ShowApp}" Padding="0,6,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <local:MainMenuButton Grid.Column="0" x:Name="btnMainMenu" 
+                                      MainMenuControl="{x:Reference menuControl}" 
+                                      MainLayout="{x:Reference mainContent}" 
+                                      ExitControl="{x:Reference gridReplace}" 
+                                      />
+
+                <local:MainStatus Grid.Column="1" x:Name="pnlMainStatus" />
+
+            </Grid>
+
+            <!--<Frame Grid.Row="0" Padding="24,0,24,24" CornerRadius="0">
+            <Label HorizontalTextAlignment="Center" TextColor="White" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="HOME " FontSize="36" FontFamily="Exo-Regular"  />
+                        <Span Text="AUTOMATION" FontSize="36" FontFamily="Exo-Light" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Frame>-->
+
+            <Grid Grid.Row="1" IsVisible="{Binding HasSetupTasks}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="Bonjour," VerticalOptions="Center" x:Name="lblGreetings2" Margin="40,80,40,0" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+                <Label Text="Pour utiliser cette application, vous devez d'abord lui autoriser l'accès à certaines fonctionnalités de votre mobile."  Margin="40,40,40,40" Grid.Row="1" VerticalOptions="Start" FontFamily="Exo-Bold" FontSize="24"  HorizontalOptions="FillAndExpand" TextColor="White"  />
+        <Frame Padding="20, 0" Grid.Row="2" >
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Vous avez des tâches de configuration à réaliser" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                        <Button Text="Configurer" VerticalOptions="Center" Clicked="DoSetupTasksButton_Clicked" HorizontalOptions="End" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1" IsVisible="{Binding ShowApp}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <ScrollView>
+
+                    <Grid>
+
+                        <StackLayout x:Name="pnlHome" IsVisible="false" Margin="40,20,40,40">
+                            <Label Text="Bonjour" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+                        </StackLayout>
+                        <StackLayout x:Name="pnlHouse" IsVisible="false">
+                            <Label Text="House" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+                        </StackLayout>
+                        <StackLayout x:Name="pnlChat" IsVisible="false">
+                            <Label Text="Chat" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+
+                        </StackLayout>
+                        <StackLayout x:Name="pnlTodo" IsVisible="false">
+                            <Label Text="Todo" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+
+                        </StackLayout>
+
+
+                    </Grid>
+                    
+                </ScrollView>
+
+                <Grid Grid.Row="1" ColumnSpacing="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid  Grid.Column="0" Background="#232B46" Padding="10" x:Name="btnHome">
+                        <Image x:Name="imgHome" Background="#232B46" Margin="10" />
+
+                    </Grid>
+                    <Grid  Grid.Column="1" Background="#36426C" Padding="10" x:Name="btnHouse">
+                        <Image x:Name="imgHouse" Margin="10" Background="#36426C" />
+                    </Grid>
+                    <Grid Grid.Column="2" Background="#36426C" Padding="10"  x:Name="btnChat">
+                        <Image x:Name="imgChat" Margin="10" Background="#36426C" />
+
+                    </Grid>
+                    <Grid Grid.Column="3"  Padding="10" x:Name="btnTodo" Background="#36426C">
+                        <Image x:Name="imgTodo" Margin="10" Background="#36426C" />
+                    </Grid>
+                </Grid>
+
+            </Grid>
+            
+            <StackLayout Grid.Row="1" IsVisible="{Binding ShowLoading}">
+                <Label Text="Chargement en cours" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Grid  Grid.Row="1" IsVisible="{Binding ShowNotConnected}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="Bonjour," VerticalOptions="Center" x:Name="lblGreetings1" HorizontalOptions="StartAndExpand" FontSize="48" FontFamily="Exo-Black" TextColor="White" />
+                <Label Text="Pour utiliser les fonctionnalités de cette application, vous devez vous connecter."  Grid.Row="1" VerticalOptions="Start" FontFamily="Exo-Bold" FontSize="24"  HorizontalOptions="FillAndExpand" TextColor="White"  />
+                <Button Text="Connexion" Grid.Row="2" VerticalOptions="Center" Clicked="Login_Clicked" HorizontalOptions="Center" Margin="0,40,0,0" />
+            </Grid>
+
+            <StackLayout Grid.Row="1" IsVisible="{Binding ShowNotValidNetwork}">
+                <Label x:Name="tmp" Text="Vous êtes sur un réseau non valide" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                <Button Text="Refresh" VerticalOptions="Center" Clicked="btnRefreshNetwork_Clicked" HorizontalOptions="End" />
+            </StackLayout>
+
+
+            <Grid x:Name="gridReplace" Grid.RowSpan="2" BackgroundColor="#000000" Opacity="0.1" IsVisible="false">
+
+            </Grid>
+
+
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

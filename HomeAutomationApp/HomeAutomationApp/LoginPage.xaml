@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Connexion" Background="#ffffff"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="HomeAutomationApp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" Padding="30,20" x:Name="frmSaisie">
+            <Label Text="Serveur" FontSize="12" Margin="0,20,0,0"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry x:Name="txtServer" Keyboard="Url" IsSpellCheckEnabled="False"
+                   Placeholder="ex : home.mondomaine.com"
+                   Unfocused="txtServer_Unfocused" Focused="txtServer_Focused" />
+            <Label Text="User" FontSize="12" Margin="0,60,0,0"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Keyboard="Email"
+                   Placeholder="ex : adminuser"
+                x:Name="txtUser" />
+
+            <Label Text="Password" FontSize="12" Margin="0,20,0,0"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry x:Name="txtPassword" 
+                   Keyboard="Default" android:Entry.ImeOptions="Done"
+                    Placeholder="ex : #password#"
+                   IsPassword="True" />
+
+            <Button x:Name="bntLogin" Clicked="bntLogin_Clicked" BackgroundColor="#343E7A" TextColor="#efefef" Padding="20"  Text="Connexion" />
+
+            <Label  x:Name="lblStatus" Margin="0,40" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

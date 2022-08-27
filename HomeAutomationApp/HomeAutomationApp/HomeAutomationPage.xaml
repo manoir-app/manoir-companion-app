@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HomeAutomationApp"
+             x:Class="HomeAutomationApp.HomeAutomationPage">
+
+    <ContentPage.Resources>
+
+        <local:ToUpperCaseConverter x:Key="toUpper"/>
+
+        <Style TargetType="Label" x:Key="HeaderLabelStyle">
+            <Setter Property="FontSize" Value="48" />
+            <Setter Property="FontFamily" Value="Exo-Black" />
+            <Setter Property="TextColor" Value="#DCDEF8" />
+            <Setter Property="Margin" Value="0,0,0,20" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="BlockLabelStyle">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontFamily" Value="Exo-Black" />
+            <Setter Property="TextColor" Value="#DCDEF8" />
+            <Setter Property="Margin" Value="0,0,0,20" />
+        </Style>
+
+    </ContentPage.Resources>
+
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup Name="CustomVisualStates">
+            <VisualState Name="Tab1">
+                <VisualState.Setters>
+                    <Setter TargetName="btnScenes" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgScenes" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlScenes" Property="IsVisible" Value="true" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnUsers" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgUsers" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlUsers" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnDevices" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgDevices" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlDevices" Property="IsVisible" Value="false" />
+                </VisualState.Setters>
+
+            </VisualState>
+            <VisualState Name="Tab2">
+                <VisualState.Setters>
+                    <Setter TargetName="btnScenes" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgScenes" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlScenes" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="true" />
+                    <Setter TargetName="btnUsers" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgUsers" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlUsers" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnDevices" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgDevices" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlDevices" Property="IsVisible" Value="false" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState Name="Tab3">
+                <VisualState.Setters>
+                    <Setter TargetName="btnScenes" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgScenes" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlScenes" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnUsers" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgUsers" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlUsers" Property="IsVisible" Value="true" />
+                    <Setter TargetName="btnDevices" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgDevices" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlDevices" Property="IsVisible" Value="false" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState Name="Tab4">
+                <VisualState.Setters>
+                    <Setter TargetName="btnScenes" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgScenes" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlScenes" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgHouse" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlHouse" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnUsers" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="imgUsers" Property="BackgroundColor" Value="#36426C" />
+                    <Setter TargetName="pnlUsers" Property="IsVisible" Value="false" />
+                    <Setter TargetName="btnDevices" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="imgDevices" Property="BackgroundColor" Value="#232B46" />
+                    <Setter TargetName="pnlDevices" Property="IsVisible" Value="true" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="menuContent">
+                <local:MainMenu x:Name="menuControl" HorizontalOptions="Fill" VerticalOptions="Fill" />
+            </Grid>
+
+            <Grid x:Name="mainContent">
+
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="#343E7A" Offset="0.5" />
+                            <GradientStop Color="#192852" Offset="1" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0"  Padding="0,6,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <local:MainMenuButton Grid.Column="0" x:Name="btnMainMenu" 
+                                      MainMenuControl="{x:Reference menuControl}" 
+                                      MainLayout="{x:Reference mainContent}" 
+                                      ExitControl="{x:Reference gridReplace}" 
+                                      />
+
+                    <local:MainStatus Grid.Column="1" x:Name="pnlMainStatus" />
+
+                </Grid>
+
+
+                <Grid  Grid.Row="1"  VerticalOptions="Fill" HorizontalOptions="FillAndExpand" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="90" />
+                    </Grid.RowDefinitions>
+
+                    <Grid >
+
+                        <StackLayout x:Name="pnlScenes" IsVisible="true" VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="40,0,40,40">
+                            <Label Text="Scénarios" VerticalOptions="Center"  HorizontalOptions="StartAndExpand" FontSize="36" 
+                                   Margin="0,0,0,20"
+                                   FontFamily="Exo-Black" TextColor="White" />
+
+                            <CollectionView x:Name="lstScenes" VerticalOptions="Start" HorizontalOptions="Fill">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Vertical" VerticalOptions="Start" Margin="0,0,0,30">
+                                            <Label Text="{Binding Label,Converter={StaticResource toUpper}}" TextColor="#DCDEF8" FontFamily="Exo-Bold" />
+                                            <!--<ScrollView >-->
+                                            <CollectionView HeightRequest="80" ItemsSource="{Binding Scenes}" VerticalOptions="StartAndExpand"
+                                                                    HorizontalOptions="Fill">
+                                                <CollectionView.ItemsLayout>
+                                                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="4" />
+                                                </CollectionView.ItemsLayout>
+                                                <CollectionView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <!--<Label Text="{Binding Label}" BackgroundColor="Red" TextColor="White" />-->
+
+                                                        <Button Text="{Binding Label}" 
+                                                                        x:Name="btnActivateScene" Clicked="btnActivateScene_Clicked"
+                                                                        TextColor="White" BackgroundColor="#36426C" 
+                                                                        FontSize="Micro" WidthRequest="100"
+                                                                        BorderColor="#A9ABC9" BorderWidth="1" CornerRadius="4" VerticalOptions="Start" >
+                                                            <Button.Triggers>
+                                                                <DataTrigger TargetType="Button"
+                                                                                     Binding="{Binding IsActive}"
+                                                                                     Value="true">
+                                                                    <Setter Property="BackgroundColor"
+                                                                                    Value="#232B46"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger TargetType="Button"
+                                                                                     Binding="{Binding IsActivating}"
+                                                                                     Value="true">
+                                                                    <Setter Property="BackgroundColor"
+                                                                                    Value="#636B86"/>
+                                                                    <Setter Property="TextColor"
+                                                                                    Value="Wheat"/>
+                                                                </DataTrigger>
+                                                            </Button.Triggers>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </CollectionView.ItemTemplate>
+                                            </CollectionView>
+                                            <!--</ScrollView>-->
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
+                        </StackLayout>
+
+                        <StackLayout x:Name="pnlHouse" IsVisible="false" Margin="40,20,40,40">
+                            <Label Text="House" VerticalOptions="Center"  HorizontalOptions="StartAndExpand" FontSize="36" FontFamily="Exo-Black" TextColor="White" />
+
+                        </StackLayout>
+
+                        <StackLayout x:Name="pnlUsers" IsVisible="false" Margin="40,20,40,40">
+
+                            <Label Text="Users" VerticalOptions="Center"  HorizontalOptions="StartAndExpand" FontSize="36" FontFamily="Exo-Black" TextColor="White" />
+                        </StackLayout>
+
+                        <StackLayout x:Name="pnlDevices" IsVisible="false" Margin="40,20,40,40">
+                            <Label Text="Devices" VerticalOptions="Center"  HorizontalOptions="StartAndExpand" FontSize="36" FontFamily="Exo-Black" TextColor="White" />
+
+                            <CollectionView x:Name="lstDevices" ItemsSource="{Binding Devices}" VerticalOptions="StartAndExpand"
+                                                                    HorizontalOptions="Fill">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="3" />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame Margin="0,0,0,20" BackgroundColor="#36426C" Padding="0" BorderColor="#DCDEF8">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="60" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="60" />
+                                            </Grid.ColumnDefinitions>
+
+                                                <Frame Grid.Column="0" BackgroundColor="#232B46" Padding="0" Margin="1,2,0,2">
+                                                    
+                                                </Frame>
+                                            
+                                            <StackLayout Grid.Column="1" Margin="4">
+                                                <Label Text="{Binding DeviceGivenName}" TextColor="White" />
+                                                <Label Text="{Binding DeviceInternalName}" TextColor="#DCDEF8" FontSize="Micro" />
+                                            </StackLayout>
+
+                                        </Grid>
+                                        </Frame>
+                                        
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+
+                    </Grid>
+
+
+
+                    <Grid Grid.Row="1" ColumnSpacing="2" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid  Grid.Column="0" Background="#232B46" Padding="10" x:Name="btnScenes">
+                            <Image x:Name="imgScenes" Background="#232B46" Margin="10" />
+
+                        </Grid>
+                        <Grid  Grid.Column="1" Background="#36426C" Padding="10" x:Name="btnHouse">
+                            <Image x:Name="imgHouse" Margin="10" Background="#36426C" />
+                        </Grid>
+                        <Grid Grid.Column="2" Background="#36426C" Padding="10"  x:Name="btnUsers">
+                            <Image x:Name="imgUsers" Margin="10" Background="#36426C" />
+
+                        </Grid>
+                        <Grid Grid.Column="3"  Padding="10" x:Name="btnDevices" Background="#36426C">
+                            <Image x:Name="imgDevices" Margin="10" Background="#36426C" />
+                        </Grid>
+                    </Grid>
+
+
+                </Grid>
+
+
+                <Grid x:Name="gridReplace" Grid.RowSpan="2" BackgroundColor="#000000" Opacity="0.1" IsVisible="false">
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
