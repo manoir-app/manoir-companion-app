@@ -1,2 +1,2 @@
 # manoir-companion-app
-Mobile multiplatform (.net Maui based) companion app for manoir
+Mobile multiplatform (xamarin forms or .net Maui based) companion app for manoir
